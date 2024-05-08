@@ -11,6 +11,8 @@ window.onload = function() {
             var target = document.getElementById(this.href.split('#')[1]);  
             if (navbarLinks.classList.contains('show')) {
                 navbarLinks.classList.toggle('show');
+                dropdownButton.classList.toggle('fa-bars')
+                dropdownButton.classList.toggle('fa-times')
             }
             if (this.href.split('#')[1] !== 'top') {
                 let offset = 0;
