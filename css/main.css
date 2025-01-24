@@ -7,9 +7,10 @@
     transition: background-color 0.3s ease;
 }
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Inter", "Poppins", sans-serif;
     margin: 0;
     padding-top: 5vh;
+    line-height: 1.6;
 }
 html {
     scroll-behavior: smooth;
@@ -59,13 +60,16 @@ footer {
 /* Navigation Bar styling */
 .navbar a:hover{
     background-color: black;
+    transition: all .5s ease;
 }
 .navbar {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     overflow: hidden;
-    background-color: #0e0e0e;
+    background-color: rgba(2, 2, 2, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     width: 100%;
     position: fixed;
     top: 0;
@@ -75,9 +79,15 @@ footer {
     float: none;
     display: block;
     color: #f2f2f2;
+    font-weight: 500;
+    position: relative;
     text-align: center;
     padding: 1.2em 5vh;
     text-decoration: none;
+}
+.navbar a:hover::after {
+    width: 100%;
+    left: 0;
 }
 .dropdown-button {
     display: none;
@@ -103,6 +113,7 @@ footer {
     background-color: black;
     justify-content: space-between;
     flex-direction: column;
+    position: relative;
 }
 .name {
     color: white;
@@ -180,6 +191,7 @@ footer {
 .experience-title {
     top: 0;
     margin-left: 30%;
+    font-weight: 600;
 }
 .experience-details {
     max-width: 70%;
@@ -199,11 +211,14 @@ footer {
 .skill {
     background-color: #f2f2f2;
     color: black;
+    font-size: 0.9em;
+    font-weight: 500;
     padding: .5em 1em;
     margin-right: .5em;
     margin-bottom: .5em;
     border-radius: 2em;
     display: inline-block;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact styling */
@@ -240,6 +255,7 @@ footer {
     .navbar-links.show {
         display: flex;
         height: 95vh;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     .navbar a {
         font-size: 3vh;
@@ -270,7 +286,7 @@ footer {
     }
     h2 {
         margin-bottom: 2vh;
-        font-size: 12vw;
+        font-size: 8vw;
     }
     .name {
         font-size: 10vw;
