@@ -214,6 +214,11 @@ footer {
 }
 
 /* Media queries */
+@media (min-width: 1024px) {
+    .navbar {
+        height: 5vh;
+    }
+}
 @media (max-width: 1024px) {
     .dropdown-button {
         display: block;
